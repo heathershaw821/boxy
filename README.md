@@ -1,4 +1,4 @@
-# ❤️ boxy ❤️ 
+# boxy ❤️ 
 
 Heather's Jail Management System for FreeBSD  
 
