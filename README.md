@@ -138,7 +138,7 @@ Feel free to submit issues or pull requests to enhance `boxy`!
 
 ## License  
 
-`boxy` is licensed under the [®KILL](LICENSE).  
+`boxy` is licensed under the [®KILL](LICENSE.md).  
 
 ---
 
