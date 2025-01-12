@@ -20,7 +20,7 @@ Heather's Jail Management System for FreeBSD
 
 1. Clone the repository:  
    ```bash
-   git clone https://github.com/yourusername/boxy.git
+   git clone https://github.com/heathershaw821/boxy.git
    ```  
 
 2. Navigate to the directory:  
