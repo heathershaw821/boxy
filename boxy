@@ -123,7 +123,7 @@ $jail_name {
 }
 """
 
-	sudo zfs clone zroot/boxy-corral/templates/$template zroot/jails/containers/$jail_name
+	sudo zfs clone zroot/boxy-corral/templates/$template zroot/boxy-corral/containers/$jail_name
 	sudo chroot /usr/local/jails/boxy-corral/containers/$jail_name pw groupadd $USER -g $UID
 	sudo chroot /usr/local/jails/boxy-corral/containers/$jail_name pw useradd $USER -u $UID -m -d /home/$USER -s /bin/sh
 	sudo bash -c "echo '$DEFAULT_CONFIG' > /etc/jail.conf.d/$jail_name.conf"
@@ -206,8 +206,8 @@ linsysfs        /usr/local/jails/boxy-corral/containers/$1/sys      linsysfs    
 """
 	sudo bash -c "echo -e 'root::0:0::0:0:Charlie &:/root:/bin/sh\ntoor:*:0:0::0:0:Bourne-again Superuser:/root:' > /usr/local/jails/boxy-corral/containers/$1/etc/master.passwd"
 	sudo /usr/sbin/pwd_mkdb -d /usr/local/jails/boxy-corral/containers/$1/etc -p /usr/local/jails/boxy-corral/containers/$1/etc/master.passwd
-	sudo chroot /usr/local/jails/boxy-corral/containers/$1 bash -c 'echo "exit 0">> /etc/rc.local;chmod +x rc.local'
-	sudo chroot /usr/local/jails/boxy-corral/containers/$1 bash -c 'echo "exit 0">> /etc/rc.shutdown;chmod +x rc.shutdown'
+	sudo chroot /usr/local/jails/boxy-corral/containers/$1 bash -c 'echo "exit 0">> /etc/rc.local;chmod +x /etc/rc.local'
+	sudo chroot /usr/local/jails/boxy-corral/containers/$1 bash -c 'echo "exit 0">> /etc/rc.shutdown;chmod +x /etc/rc.shutdown'
 	sudo chroot /usr/local/jails/boxy-corral/containers/$1 ln -s /bin/bash /usr/local/bin/bash
 	sudo bash -c "echo '$FSTAB' > /usr/local/jails/boxy-corral/containers/$1/etc/fstab"
 	sudo bash -c "echo '$DEFAULT_CONFIG' > /etc/jail.conf.d/$1.conf"
