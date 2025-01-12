@@ -1,0 +1,2 @@
+FreeBSD-14.2 filter=lfs diff=lfs merge=lfs -text
+bookworm filter=lfs diff=lfs merge=lfs -text
