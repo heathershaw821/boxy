@@ -105,7 +105,7 @@ boxy snapshot <command> [args]
 
 1. Create a new jail:  
    ```bash
-   boxy create myjail template1
+   boxy create myjail FreeBSD-12.2
    ```  
 
 2. List running jails:  
@@ -115,17 +115,17 @@ boxy snapshot <command> [args]
 
 3. Start a jail:  
    ```bash
-   boxy jail start myjail
+   boxy myjail start
    ```  
 
 4. Install a package inside a jail:  
    ```bash
-   boxy jail install nginx
+   boxy myjail install nginx
    ```  
 
 5. Enable Linux compatibility for a jail:  
    ```bash
-   boxy jail linuxify myjail
+   boxy myjail linuxify
    ```  
 
 ---
